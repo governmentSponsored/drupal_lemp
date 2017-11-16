@@ -1,0 +1,12 @@
+version: "3"
+volumes:
+  my-mac-mysq01-storage:
+services:
+  drupalapp01:
+    image: srirams/drupal_lemp:minimum
+    volumes:
+#      - my-mac-mysq01-storage:/var/lib/mysql
+#      - /some/path/om/mac:/var/www/docker_platform
+    command: /root/start.sh
+    ports:
+      - "8080:80"
