@@ -5,8 +5,8 @@ services:
   drupalapp01:
     image: srirams/drupal_lemp:minimum
     volumes:
-#      - my-mac-mysq01-storage:/var/lib/mysql
+      - my-mac-mysq01-storage:/var/lib/mysql
 #      - /some/path/om/mac:/var/www/docker_platform
-    command: /root/start.sh
+    command: /root/start.sh --dbname=app01
     ports:
       - "8080:80"
