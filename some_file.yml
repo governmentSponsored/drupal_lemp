@@ -1,10 +1,10 @@
 version: "3"
-volumes:
-  my-mac-mysq01-storage:
+#volumes:
+#  my-mac-mysq01-storage:
 services:
   drupalapp01:
     image: srirams/drupal_lemp:minimum
-    volumes:
+#    volumes:
 #      - my-mac-mysq01-storage:/var/lib/mysql
 #      - /some/path/om/mac:/var/www/docker_platform
     command: /root/start.sh --dbname=app01 
